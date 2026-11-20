@@ -4,6 +4,7 @@
   become: yes
   vars:
     repo_url: "https://github.com/jenkins-docs/simple-node-js-react-npm-app.git"  # You can change it with another public NodeJs Repo if desired.
+    repo_branch: "master"
     app_dir: "/app"
 
 
@@ -36,7 +37,7 @@
       ansible.builtin.git:
         repo: "{{ repo_url }}"
         dest: /opt/my-app/
-        version: "master"
+        version: "{{ repo_branch }}"
 
 
     - name: Transfering the files to the working directory.
