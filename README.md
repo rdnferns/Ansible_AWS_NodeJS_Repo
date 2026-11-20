@@ -1,5 +1,5 @@
 # Ansible_AWS_NodeJS_Repo
-It is a repository that has two exercises about deploying NodeJS on an amazon ec2 instance using ansible-playbook, ansible is a tool primarily used for configuring a enviroment on cloud infrastructures services like AWS, GCP, Azure, etc. It is quite a useful tool in the tech field mainly among DevOps professionals.
+It is a repository that has two exercises about deploying NodeJS on an amazon ec2 instance using ansible-playbook, ansible is a tool primarily used for configuring a environment on cloud infrastructures services like AWS, GCP, Azure, etc. It is quite a useful tool in the tech field mainly among DevOps professionals.
 
 <br><br><br>
 
@@ -16,7 +16,7 @@ It is a repository that has two exercises about deploying NodeJS on an amazon ec
 <br><br><br>
 
 # 2) Assignment-1: Deploying NodeJS app using Ansible.
-=> In this assignment, we basically execute an ansible-playbook that will prrimarily:
+=> In this assignment, we basically execute an ansible-playbook that will primarily:
 1) Install Git & clone a public node.js repo.
 2) Install NodeJS & PM2 into your ec2 instance.
 3) Run your NodeJS application in your ec2 system.
@@ -45,7 +45,7 @@ It is a repository that has two exercises about deploying NodeJS on an amazon ec
 terraform init
 terraform validate
 terraform plan
-terraform apply -var my_ip=$(curl ifconfig.me ; echo "/32")  # You can exclude -var if you hardcoded your ip in .tfvars file.
+terraform apply -var my_ip=$(curl ifconfig.me ; echo "/32")  # You can exclude -var if you hard-coded your ip in .tfvars file.
 ```
 <br>
 
@@ -106,7 +106,7 @@ sudo bash -c 'source /root/.nvm/nvm.sh && pm2 list'
 
 curl localhost:3000
 
-# Note: You can use any other commands that helps your cause, in-case you have strong expertise in these stacks ;).
+# Note: You can use any other commands that helps your cause, in-case you have strong expertise in these stacks ;)
 
 # Note2: If you don't want this project to continue, you can perform 'terraform destroy' command in your local machine to end everything.
 ```
@@ -128,7 +128,7 @@ curl localhost:3000
 
 
 <h3>Step-2: Set up the desired configuration in the respective files</h3>
-> Again, ensure that your .tfvars & all the .tf files have been successfully configired, but I also heavily recommend to read & observe all the files & the playbook.yml file too, for understanding the changes made compared to the first exercise
+> Again, ensure that your .tfvars & all the .tf files have been successfully configured, but I also heavily recommend to read & observe all the files & the playbook.yml file too, for understanding the changes made compared to the first exercise
 
 <br><br>
 
@@ -139,7 +139,7 @@ curl localhost:3000
 terraform init
 terraform validate
 terraform plan
-terraform apply -var my_ip=$(curl ifconfig.me ; echo "/32")  # again, exclude -var if you hardcoded your ip in .tfvars file.
+terraform apply -var my_ip=$(curl ifconfig.me ; echo "/32")  # again, exclude -var if you hard-coded your ip in .tfvars file.
 ```
 <br>
 
@@ -154,16 +154,19 @@ terraform apply -var my_ip=$(curl ifconfig.me ; echo "/32")  # again, exclude -v
 <br><br><br>
 
 # Notes:
-- Github repo used for assignment-1: https://github.com/rat9615/simple-nodejs-app.git  -credit: rat9615.
+- GitHub repo used for assignment-1: https://github.com/rat9615/simple-nodejs-app.git  -credit: rat9615.
 - For assignment-2: https://github.com/jenkins-docs/simple-node-js-react-npm-app.git  -credit: jenkins-docs.
 - If you want, you can change those with any other desired NodeJS GitHub Profile.
 - in the private_key_id variable, use your own .pem sha key.
-- similary for private key path, place the path to your sha key pair generated (.pem file).
-- Porting: As both GitHub accounts listen to 3000, we allowed aws sg to allow access to the suer.
+- similarly for private key path, place the path to your sha key pair generated (.pem file).
+- Porting: As both GitHub accounts listen to 3000, we allowed aws sg to allow access to the user.
 - On the porting, if your custom repo uses another port, change the required configs.
 - If your repo listens to no ports, you can remove or comment that section in the amazo-ec2.tf file.
 - You are free to use the files & customize it as you please, as long as it's not pushed to this repo.
-- I hope it proves useful & helps you with your journey :D
+- Also don't forget to save the output, otherwise troubles may follow update & destroy.
+- In case of failure to save, refer to management console's security group rules, it should be there.
+- If you want to challenge, I encourage to try to use Ansible on 2 EC2 instances, some code already written.
+- I hope it proves useful & helps you with your journey, if it's DevOps or any other tech-stack roles. :D
 - This repo is created by "rdnferns", on Nov 21 2026.
 - Thank you & have a nice day 👍
 
