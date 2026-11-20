@@ -4,7 +4,7 @@ private_key_path = "the/path/to/your/private/shakey.pem"
 
 # Important private data (be mindful & protect this data)
 my_ip          = ""                     # Recommend to keep this empty as it will be declared when applied
-private_key_id = "YourPemKey"
+private_key_id = "YourPemKey_name"
 
 
 # ec2 instance config for 1st instance
