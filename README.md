@@ -52,6 +52,8 @@ terraform apply -var my_ip=$(curl ifconfig.me ; echo "/32")  # You can exclude -
 <h3>Step-4: Now in your AWS management console carry out the following actions</h3>
 > Click on the checkbox on the newly created instance & then next click on the connect option, once you enter the new tab, select the ssh tab, you should find this entire line at the bottom, copy it as it will be handy for the next task.
 
+![aws-img-1]()
+
 <br><br>
 
 ```bash
