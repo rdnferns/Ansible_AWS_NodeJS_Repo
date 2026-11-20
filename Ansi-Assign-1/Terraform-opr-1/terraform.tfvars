@@ -1,6 +1,6 @@
 # Important private data (be mindful & protect this data)
 my_ip          = ""                 # recommend to keep it empty, it can be declared when running terraform apply
-private_key_id = "YourPemKey"
+private_key_id = "YourPemKey_name"
 
 
 # ec2 instance config for 1st instance
