@@ -156,7 +156,7 @@ terraform apply -var my_ip=$(curl ifconfig.me ; echo "/32")  # again, exclude -v
 # Notes:
 - GitHub repo used for assignment-1: https://github.com/rat9615/simple-nodejs-app.git  -credit: rat9615.
 - For assignment-2: https://github.com/jenkins-docs/simple-node-js-react-npm-app.git  -credit: jenkins-docs.
-- If you want, you can change those with any other desired NodeJS GitHub Profile.
+- If you want, you can change those with any other desired NodeJS GitHub public repos.
 - in the private_key_id variable, use your own .pem sha key.
 - similarly for private key path, place the path to your sha key pair generated (.pem file).
 - Porting: As both GitHub accounts listen to 3000, we allowed aws sg to allow access to the user.
