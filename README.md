@@ -36,6 +36,8 @@ It is a repository that has two exercises about deploying NodeJS on an amazon ec
 <h3>Step-3: Execute the required Terraform commands to build the desired AWS infrastructure</h3>
 > Execute the following set of commands into you local linux system.
 
+<br><br>
+
 ```bash
 # Execute all these commands while in the Terrafor-opr-1 directory, once done get back to Ansi-Assign-1 directory
 #
@@ -50,6 +52,8 @@ terraform apply -var my_ip=$(curl ifconfig.me ; echo "/32")  # You can exclude -
 <h3>Step-4: Now in your AWS management console carry out the following actions</h3>
 > Click on the checkbox on the newly created instance & then next click on the connect option, once you enter the new tab, select the ssh tab, you should find this entire line at the bottom, copy it as it will be handy for the next task.
 
+<br><br>
+
 ```bash
 ssh -i "YourPemKey.pem" ubuntu@ec2-##-###-##-###.ap-south-1.compute.amazonaws.com
 ```
@@ -57,6 +61,8 @@ ssh -i "YourPemKey.pem" ubuntu@ec2-##-###-##-###.ap-south-1.compute.amazonaws.co
 
 <h3>Step-5: Now copy that line from the console, & carry out the following</h3>
 > Once you get the whole command, either change to a directory where your sha .pem key is located or bring your .pem key to your directory & execute this modified command. To confirm it work, try entering your ec2 instance just using the host-id & DNS 
+
+<br><br>
 
 ```bash
 # Execute this. 
@@ -85,8 +91,11 @@ ansible-playbook -i inventory.ini playbook.yml
 
 <h3>Step-8: Observation: </h3>
 > In Order to observe if Ansible successfully configured your ec2 instance, log into your instance terminal & execute the following commands to verify that you instance has been configured & app is running.
-<br>
+
+<br><br>
+
 In your ec2 instance terminal
+<br>
 
 ```bash
 git --version
@@ -132,7 +141,7 @@ terraform validate
 terraform plan
 terraform apply -var my_ip=$(curl ifconfig.me ; echo "/32")  # again, exclude -var if you hardcoded your ip in .tfvars file.
 ```
-<br><br>
+<br>
 
 <h3>Step-4: Observe the terminal  </h3>
 > This is a request, kindly keep an eye on the terminal as ansible-playbooks starts to play as Terraform finishes building the ec2 instance.
@@ -141,6 +150,22 @@ terraform apply -var my_ip=$(curl ifconfig.me ; echo "/32")  # again, exclude -v
 
 <h3>Step-5: Exercise-2: Observation</h3>
 > Follow the [step-8] of previous exercise & observe the changes created.
+
+<br><br><br>
+
+# Notes:
+- Github repo used for assignment-1: https://github.com/rat9615/simple-nodejs-app.git  -credit: rat9615.
+- For assignment-2: https://github.com/jenkins-docs/simple-node-js-react-npm-app.git  -credit: jenkins-docs.
+- If you want, you can change those with any other desired NodeJS GitHub Profile.
+- in the private_key_id variable, use your own .pem sha key.
+- similary for private key path, place the path to your sha key pair generated (.pem file).
+- Porting: As both GitHub accounts listen to 3000, we allowed aws sg to allow access to the suer.
+- On the porting, if your custom repo uses another port, change the required configs.
+- If your repo listens to no ports, you can remove or comment that section in the amazo-ec2.tf file.
+- You are free to use the files & customize it as you please, as long as it's not pushed to this repo.
+- I hope it proves useful & helps you with your journey :D
+- This repo is created by "rdnferns", on Nov 21 2026.
+- Thank you & have a nice day 👍
 
 <br><br><br>
 
